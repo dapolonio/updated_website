@@ -1,0 +1,234 @@
+/* Stylesheet for Seasons Website */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&family=Quicksand:wght@600&display=swap');
+body {
+  margin: 0;
+  background-color: white;
+}
+
+#container {
+  max-width: 75em;
+  margin: auto;
+}
+
+header, nav, footer {
+  padding: 1em;
+}
+
+h1, p, nav {
+  font-family: Quicksand, sans-serif;
+}
+p {
+  line-height: 1.5; 
+  text-align: justify;
+  font-size: 20px;
+
+}
+.small_font {
+  font-size: 14px;
+}
+.big_font {
+    font-size: 40px;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.selected {
+  background-color: yellow;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.3em;
+  margin: 15px;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+article {
+  padding: 1em;
+  padding-bottom: 0;
+}
+
+article > p {
+  font-size: 1.2em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+a:link, a:visited {
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+h1 > a:link, h1 > a:visited {
+  text-transform: none;
+}
+
+a:hover {
+  background-color: magenta;
+}
+
+a:active {
+  background-color: yellow;
+}
+
+
+.flex {
+  display: flex;
+}
+.h-stretch {
+  grid-column: span 2;
+  width: 100%;
+}
+
+.header {
+  font-size: 25px;
+  letter-spacing: .8rem;
+}
+.center {
+  text-align: center;
+}
+
+/*---------------------------YOUTUBE VIDEO FORMATTING--------------------------*/
+
+
+.video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px; overflow: hidden; }
+.video-container iframe, .video-container object, .video-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+/*--------------------------FOR LIFTING GALLERY PICS SLIDESHOW---------------------------*/
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+/*--------------------------MEDIA QUERIES---------------------------*/
+@media (max-width: 480px) {
+
+  main {
+    display: block;
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    flex-direction: row;
+  }
+
+  nav > a {
+    margin-right: 1em;
+  }
+
+}
+
+@media (min-width: 500px) {
+
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  article {
+    padding-top: 0;
+  }
+  nav {
+    flex-direction: row;
+  }
+
+  nav > a {
+    margin-right: 1em;
+  }
+
+
+}
